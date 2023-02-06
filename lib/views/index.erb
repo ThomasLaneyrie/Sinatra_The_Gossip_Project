@@ -19,15 +19,13 @@
         <ul>
           <li>Auteur : <%= gossip.author %></li>
           <li>Contenu : <%= gossip.content %></li>
-          <li><a href = "/gossips/<%=index+1%>">Lien</a></li><br/>
+          <li><a href = "/gossips/<%=index+1%>">Commentaires sur le potin</a></li>
+          <li><a href = "/gossips/<%=index+1%>/edit/">Modifier le potin</a></li><br/>
         </ul>
       </p>
     <% end %>
 
-    <h1>Mon super site de gossip, depuis le dossier views ! ET OUAIS MA GUEULE</h1>
-      <ul>
-      <li>Coucou</li>
-      <li><a href="/gossips/new/">Aller créer un nouveau potin</a></li>
-      </ul>
+    <h1>Toi aussi tu as pleins de potins à raconter à propos des moussaillons ?</h1>
+      <h2>> <a href="/gossips/new/">Ajouter un nouveau potin</a></h2>
   </body>
 </html>

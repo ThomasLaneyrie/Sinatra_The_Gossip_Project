@@ -7,8 +7,14 @@
     <p>Voici la page du potin N° <%=params['id']%></p>
     <p>Son auteur : <%= gossip.author %></p>
     <p>Le contenu du potin : <%= gossip.content %></p>
-    <p>Voici le <a href="/">lien</a> pour revenir à la page des potins</p>
-    <p>Aussi, tu peux cliquer <a href="/gossips/<%=params['id']%>/edit/">ici</a> si tu veux modifier ce potin</p>
+    <p>Voici le <a href="/"><strong>lien</strong></a> pour revenir à la page des potins</p>
+    <p>Aussi, tu peux cliquer <a href="/gossips/<%=params['id']%>/edit/"><strong>ici</strong></a> si tu veux modifier ce potin</p>
+    <h2>Voici la liste des commentaires bande de petit curieux</h2>
+    <ul>
+    <% comments.each_with_index do |comment, index| %>
+        <li>Commentaire <%= index %> : <%= comment %></li>
+    <% end %>
+    </ul>
+    <p>Si tu souhaites ajouter un commentaire à ce potin, clique <a href="/gossips/<%=params['id']%>/comments/"><strong>ici</strong></a></p>
   </body>
 </html>
-
