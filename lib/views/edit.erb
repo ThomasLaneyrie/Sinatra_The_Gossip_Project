@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Edite ton gossip</title>
+  </head>
+  <body>
+    <h1>Tu vas pouvoir éditer ton Gossip !</h1>
+      <h2>Voici ton Gossip dans son état actuel</h2>
+      <p>Potin N° <%=params['id']%></p>
+      <p>Son auteur : <%= gossip.author %></p>
+      <p>Le contenu du potin : <%= gossip.content %></p>
+      <h2>Tu nous aurais menti ? Modifie ton gossip tout de suite !</h2>
+      <form action='/gossips/<%=params['id']%>/edit/' method='POST'>
+      Saisi ici ton nom : <input type='text' name='gossip_author'/><br/>
+      Balance ton potin : <input type='text' name='gossip_content'/><br/>
+      <input type='submit'/>
+    </form>
+  </body>
+</html>
